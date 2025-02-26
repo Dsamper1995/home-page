@@ -23,6 +23,26 @@ tailwind.config = {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
+    // Mobile menu toggle
+    const menuButton = document.getElementById('menuButton');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuIcon = menuButton.querySelector('i');
+
+    menuButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+        menuIcon.classList.toggle('fa-bars');
+        menuIcon.classList.toggle('fa-times');
+    });
+
+    // Close menu when clicking a link
+    mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            menuIcon.classList.add('fa-bars');
+            menuIcon.classList.remove('fa-times');
+        });
+    });
+    
     // Form validation
     const contactForm = document.getElementById('contactForm');
     const successMessage = document.getElementById('successMessage');
