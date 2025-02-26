@@ -21,10 +21,8 @@
     <meta property="twitter:image" content="https://www.recruitingconcierges.com/images/og-image.jpg">
     
     <!-- Favicon -->
-    <link rel="icon" href="/favicon.ico" sizes="any">
-    <link rel="icon" href="/icon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-    <link rel="manifest" href="/site.webmanifest">
+    <link rel="icon" href="assets/favicon.ico" sizes="any">
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -89,15 +87,27 @@
         .link-hover:hover::after {
             width: 100%;
         }
+
+        .logo {
+            height: 50px;
+            position: absolute;
+            top: -10px;
+            left: -60px;
+        }
     </style>
 </head>
 <body class="font-sans text-neutral-800 bg-white">
     <!-- Header -->
     <header class="fixed w-full bg-white/90 backdrop-blur-sm shadow-sm z-50">
-        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <a href="#" class="text-2xl font-display font-bold text-neutral-900">
-                Recruiting<span class="text-primary">Concierges</span>
-            </a>
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div class="flex items-center py-4">
+                <a href="#" class="ml-2 relative">
+                    <img src="assets/logo.png" alt="Recruiting Concierges Logo" class="logo hidden md:block">
+                    <span class="text-2xl font-display font-bold text-neutral-900">
+                        Recruiting<span class="text-primary">Concierges</span>
+                    </span>
+                </a>
+            </div>
             <nav class="hidden md:flex space-x-8">
                 <a href="#services" class="font-medium link-hover">Services</a>
                 <a href="#about" class="font-medium link-hover">About</a>
