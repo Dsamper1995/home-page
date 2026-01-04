@@ -1,0 +1,17 @@
+{
+  "name": "recruiting-concierges-home-page",
+  "version": "1.0.0",
+  "description": "Recruiting Concierges - Elite LATAM Talent Acquisition",
+  "main": "index.html",
+  "scripts": {
+    "easy": "node scripts/easy.mjs",
+    "dev": "npx browser-sync start --server --files 'index.html, assets/**/*'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "browser-sync": "^3.0.0"
+  }
+}

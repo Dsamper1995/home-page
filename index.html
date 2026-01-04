@@ -41,396 +41,595 @@
     <!-- Custom JS -->
     <script src="assets/js/script.js" defer></script>
 </head>
-<body class="font-sans text-neutral-800 bg-white">
+<body class="font-sans text-neutral-300 bg-secondary selection:bg-primary selection:text-white">
     <!-- Header -->
-    <header class="fixed w-full bg-white/90 backdrop-blur-sm shadow-sm z-50">
-        <div class="container mx-auto px-4 flex justify-between items-center">
-            <div class="flex items-center py-4">
-                <a href="#" class="ml-2 relative">
-                    <img src="assets/logo.png" alt="Recruiting Concierges Logo" class="logo hidden md:block">
-                    <span class="text-2xl font-display font-bold text-neutral-900">
-                        Recruiting<span class="text-primary">Concierges</span>
+    <header class="fixed w-full bg-secondary/80 backdrop-blur-md border-b border-white/5 z-50 transition-all duration-300">
+        <div class="container mx-auto px-6 lg:px-12 flex justify-between items-center h-20">
+            <div class="flex items-center">
+                <a href="#" class="flex items-center space-x-3 group">
+                    <svg class="h-8 w-auto" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#4C1D95" />
+                                <stop offset="100%" style="stop-color:#2E1065" />
+                            </linearGradient>
+                            <mask id="logoMask">
+                                <rect width="100" height="100" fill="white"/>
+                                <circle cx="50" cy="50" r="18" fill="black"/>
+                            </mask>
+                        </defs>
+                        <g mask="url(#logoMask)">
+                            <path d="M50 5L80 20L95 50L80 80L50 95L20 80L5 50L20 20Z" fill="url(#logoGrad)" fill-opacity="0.9"/>
+                            <path d="M50 5L80 20L50 35Z" fill="#ffffff" fill-opacity="0.1"/>
+                            <path d="M80 20L95 50L65 50Z" fill="#ffffff" fill-opacity="0.05"/>
+                            <path d="M95 50L80 80L65 65Z" fill="#000000" fill-opacity="0.1"/>
+                            <path d="M50 95L20 80L50 65Z" fill="#000000" fill-opacity="0.2"/>
+                            <path d="M20 80L5 50L35 50Z" fill="#000000" fill-opacity="0.1"/>
+                            <path d="M5 50L20 20L35 35Z" fill="#ffffff" fill-opacity="0.1"/>
+                        </g>
+                    </svg>
+                    <span class="text-xl font-bold tracking-tight text-white group-hover:text-accent transition-colors">
+                        Recruiting<span class="text-accent font-extrabold italic">Concierges</span>
                     </span>
                 </a>
             </div>
-            <nav class="hidden md:flex space-x-8">
-                <a href="#services" class="font-medium link-hover">Services</a>
-                <a href="#about" class="font-medium link-hover">About</a>
-                <a href="#contact" class="font-medium link-hover">Contact</a>
+            <nav class="hidden md:flex items-center space-x-10">
+                <a href="#services" class="text-sm font-semibold text-neutral-400 hover:text-accent transition-colors uppercase tracking-widest">The Pillars</a>
+                <a href="#about" class="text-sm font-semibold text-neutral-400 hover:text-accent transition-colors uppercase tracking-widest">The Standard</a>
+                <a href="#insights" class="text-sm font-semibold text-neutral-400 hover:text-accent transition-colors uppercase tracking-widest">The Audit</a>
+                <a href="#contact" class="text-sm font-semibold text-neutral-400 hover:text-accent transition-colors uppercase tracking-widest">Contact</a>
             </nav>
-            <a href="#contact" class="hidden md:inline-block bg-primary text-white px-5 py-2 rounded-md font-medium btn-hover">
-                Get in Touch
-            </a>
-            <button id="menuButton" class="md:hidden text-neutral-800" aria-label="Open menu">
+            <div class="hidden md:flex items-center">
+                <a href="#contact" class="bg-accent text-white hover:bg-primary px-6 py-2.5 rounded-full text-sm font-bold transition-all duration-300 transform hover:scale-105 active:scale-95 border border-white/10 shadow-lg shadow-accent/20">
+                    Start Sourcing
+                </a>
+            </div>
+            <button id="menuButton" class="md:hidden text-white p-2" aria-label="Open menu">
                 <i class="fas fa-bars text-xl"></i>
             </button>
         </div>
         
         <!-- Mobile Menu -->
-        <div id="mobileMenu" class="hidden md:hidden bg-white border-t border-neutral-200">
-            <div class="container mx-auto px-4 py-4 flex flex-col space-y-4">
-                <a href="#services" class="font-medium text-neutral-800 text-center">Services</a>
-                <a href="#about" class="font-medium text-neutral-800 text-center">About</a>
-                <a href="#contact" class="font-medium text-neutral-800 text-center">Contact</a>
+        <div id="mobileMenu" class="hidden md:hidden bg-secondary border-t border-white/5 absolute w-full shadow-2xl">
+            <div class="container mx-auto px-6 py-8 flex flex-col space-y-6">
+                <a href="#services" class="text-lg font-bold text-white hover:text-accent transition-colors">The Pillars</a>
+                <a href="#about" class="text-lg font-bold text-white hover:text-accent transition-colors">The Standard</a>
+                <a href="#insights" class="text-lg font-bold text-white hover:text-accent transition-colors">The Audit</a>
+                <a href="#contact" class="text-lg font-bold text-white hover:text-accent transition-colors">Contact</a>
+                <a href="#contact" class="w-full bg-accent text-white text-center py-4 rounded-xl font-bold transition-all hover:bg-primary active:scale-[0.98]">Start Sourcing</a>
             </div>
         </div>
     </header>
 
     <main>
         <!-- Hero Section -->
-        <section class="pt-32 pb-20 bg-gradient-to-br from-neutral-100 to-white">
-            <div class="container mx-auto px-4">
-                <div class="flex flex-col md:flex-row items-center">
-                    <div class="md:w-1/2 mb-10 md:mb-0">
-                        <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold leading-tight mb-6">
-                            Connecting <span class="text-primary">Exceptional</span> Talent With Great Companies
-                        </h1>
-                        <p class="text-lg text-neutral-800 mb-8 max-w-lg">
-                            We're a specialized recruiting agency that helps businesses find and hire the best professionals quickly and efficiently, saving you time and resources.
-                        </p>
-                        <div class="flex space-x-4">
-                            <a href="#contact" class="bg-primary hover:bg-secondary text-white px-8 py-3 rounded-md font-semibold transition-colors duration-300 btn-hover">
-                                Contact Us
-                            </a>
-                            <a href="#services" class="border-2 border-neutral-300 text-neutral-800 px-8 py-3 rounded-md font-semibold transition-colors duration-300 hover:border-primary hover:text-primary">
-                                Our Services
-                            </a>
-                        </div>
-                    </div>
-                    <div class="md:w-1/2">
-                        <img src="assets/team.png" alt="Recruiting professionals in a modern office environment" class="w-full">
+        <section class="relative pt-48 pb-32 overflow-hidden bg-black">
+            <!-- Abstract background elements -->
+            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full pointer-events-none opacity-40">
+                <div class="absolute top-[-10%] left-[-10%] w-[60%] h-[60%] bg-primary/30 rounded-full blur-[140px]"></div>
+                <div class="absolute bottom-[-10%] right-[-10%] w-[60%] h-[60%] bg-accent/20 rounded-full blur-[120px]"></div>
+            </div>
+
+            <div class="container mx-auto px-6 lg:px-12 relative z-10">
+                <div class="max-w-4xl mx-auto text-center">
+                    <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter text-white leading-[0.9] mb-10">
+                        Recruiters Sell Candidates. We Install <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent via-white to-neutral-500">Performance</span>.
+                    </h1>
+                    <p class="text-xl md:text-2xl text-neutral-400 mb-12 max-w-2xl mx-auto leading-relaxed font-medium">
+                        Stop buying candidate volume. We curate the <span class="text-white font-semibold">LATAM 1%</span> for teams that refuse to let hiring become a bottleneck to execution.
+                    </p>
+                    <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6">
+                        <a href="#contact" class="w-full sm:w-auto bg-accent hover:bg-primary text-white px-10 py-5 rounded-full font-bold transition-all duration-300 transform hover:translate-y-[-2px] shadow-lg shadow-accent/20 border border-white/10">
+                            Partner With Us
+                        </a>
+                        <a href="#services" class="w-full sm:w-auto bg-white/5 border border-white/10 hover:bg-white/10 text-white px-10 py-5 rounded-full font-bold transition-all duration-300">
+                            Explore the Triad
+                        </a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Services Section -->
-        <section id="services" class="py-20 bg-white">
-            <div class="container mx-auto px-4">
-                <div class="text-center mb-16">
-                    <h2 class="text-3xl md:text-4xl font-display font-bold mb-4">Our Services</h2>
-                    <p class="text-lg text-neutral-700 max-w-2xl mx-auto">
-                        We provide comprehensive recruiting solutions to help your business find the perfect talent.
+        <!-- Marquee Clients / Placed Talent Section -->
+        <section class="py-20 bg-secondary border-b border-white/5 overflow-hidden">
+            <div class="container mx-auto px-6 lg:px-12 mb-10">
+                <p class="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 text-center lg:text-left">Marquee Placements & Partners</p>
+            </div>
+            
+            <div class="relative flex overflow-x-hidden">
+                <div class="py-6 animate-marquee whitespace-nowrap flex items-center space-x-12 lg:space-x-24 opacity-30 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-700">
+                    <!-- Baptist Hospital -->
+                    <svg class="h-8 lg:h-10 w-auto" viewBox="0 0 120 40" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 5h10v10h10v10H25v10H15V25H5V15h10V5z"/>
+                        <text x="40" y="25" font-family="Montserrat" font-weight="800" font-size="14">BAPTIST</text>
+                    </svg>
+                    <!-- Paramount -->
+                    <svg class="h-8 lg:h-10 w-auto" viewBox="0 0 120 40" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20 5l15 30H5L20 5z"/>
+                        <circle cx="20" cy="22" r="10" fill="none" stroke="currentColor" stroke-width="2"/>
+                        <text x="40" y="25" font-family="Montserrat" font-weight="800" font-size="14">PARAMOUNT</text>
+                    </svg>
+                    <!-- KPMG -->
+                    <svg class="h-8 lg:h-10 w-auto" viewBox="0 0 100 40" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <text x="0" y="28" font-family="Montserrat" font-weight="900" font-size="24">KPMG</text>
+                    </svg>
+                    <!-- Hard Rock -->
+                    <svg class="h-8 lg:h-10 w-auto" viewBox="0 0 140 40" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="20" cy="20" r="15" fill="none" stroke="currentColor" stroke-width="3"/>
+                        <path d="M15 15l10 10M25 15l-10 10" stroke="currentColor" stroke-width="3"/>
+                        <text x="45" y="25" font-family="Montserrat" font-weight="800" font-size="14">HARD ROCK</text>
+                    </svg>
+                    <!-- Royal Caribbean -->
+                    <svg class="h-8 lg:h-10 w-auto" viewBox="0 0 160 40" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20 10l5 15h-10l5-15zM10 30h20v2H10v-2z"/>
+                        <text x="40" y="25" font-family="Montserrat" font-weight="800" font-size="14">ROYAL CARIBBEAN</text>
+                    </svg>
+                    <!-- Carnival -->
+                    <svg class="h-8 lg:h-10 w-auto" viewBox="0 0 130 40" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 35c20-30 40-30 60 0H5z"/>
+                        <text x="40" y="25" font-family="Montserrat" font-weight="800" font-size="14">CARNIVAL</text>
+                    </svg>
+                    <!-- Norwegian -->
+                    <svg class="h-8 lg:h-10 w-auto" viewBox="0 0 140 40" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="20" cy="20" r="12" fill="none" stroke="currentColor" stroke-width="3"/>
+                        <path d="M20 8v24M8 20h24" stroke="currentColor" stroke-width="2"/>
+                        <text x="40" y="25" font-family="Montserrat" font-weight="800" font-size="14">NORWEGIAN</text>
+                    </svg>
+                    <!-- Princess -->
+                    <svg class="h-8 lg:h-10 w-auto" viewBox="0 0 130 40" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20 10l3 7 7 1-5 5 1 7-6-4-6 4 1-7-5-5 7-1 3-7z"/>
+                        <text x="40" y="25" font-family="Montserrat" font-weight="800" font-size="14">PRINCESS</text>
+                    </svg>
+                    <!-- Virgin -->
+                    <svg class="h-8 lg:h-10 w-auto" viewBox="0 0 120 40" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <text x="0" y="28" font-family="Montserrat" font-weight="900" font-size="28" font-style="italic">Virgin</text>
+                    </svg>
+                    <!-- Chenmed -->
+                    <svg class="h-8 lg:h-10 w-auto" viewBox="0 0 120 40" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 20h20M20 10v20" stroke="currentColor" stroke-width="4"/>
+                        <text x="40" y="25" font-family="Montserrat" font-weight="800" font-size="14">CHENMED</text>
+                    </svg>
+                    <!-- Bayview -->
+                    <svg class="h-8 lg:h-10 w-auto" viewBox="0 0 120 40" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 30s10-20 20 0"/>
+                        <text x="35" y="25" font-family="Montserrat" font-weight="800" font-size="14">BAYVIEW</text>
+                    </svg>
+                    <!-- RBI -->
+                    <svg class="h-8 lg:h-10 w-auto" viewBox="0 0 100 40" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <text x="0" y="28" font-family="Montserrat" font-weight="900" font-size="24">RBI</text>
+                    </svg>
+                    <!-- Lennar -->
+                    <svg class="h-8 lg:h-10 w-auto" viewBox="0 0 110 40" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 35V10l15-5 15 5v25H5z" fill="none" stroke="currentColor" stroke-width="2"/>
+                        <text x="45" y="25" font-family="Montserrat" font-weight="800" font-size="14">LENNAR</text>
+                    </svg>
+                </div>
+
+                <div class="absolute top-0 py-6 animate-marquee2 whitespace-nowrap flex items-center space-x-12 lg:space-x-24 opacity-30 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-700">
+                    <!-- Baptist Hospital -->
+                    <svg class="h-8 lg:h-10 w-auto" viewBox="0 0 120 40" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 5h10v10h10v10H25v10H15V25H5V15h10V5z"/>
+                        <text x="40" y="25" font-family="Montserrat" font-weight="800" font-size="14">BAPTIST</text>
+                    </svg>
+                    <!-- Paramount -->
+                    <svg class="h-8 lg:h-10 w-auto" viewBox="0 0 120 40" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20 5l15 30H5L20 5z"/>
+                        <circle cx="20" cy="22" r="10" fill="none" stroke="currentColor" stroke-width="2"/>
+                        <text x="40" y="25" font-family="Montserrat" font-weight="800" font-size="14">PARAMOUNT</text>
+                    </svg>
+                    <!-- KPMG -->
+                    <svg class="h-8 lg:h-10 w-auto" viewBox="0 0 100 40" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <text x="0" y="28" font-family="Montserrat" font-weight="900" font-size="24">KPMG</text>
+                    </svg>
+                    <!-- Hard Rock -->
+                    <svg class="h-8 lg:h-10 w-auto" viewBox="0 0 140 40" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="20" cy="20" r="15" fill="none" stroke="currentColor" stroke-width="3"/>
+                        <path d="M15 15l10 10M25 15l-10 10" stroke="currentColor" stroke-width="3"/>
+                        <text x="45" y="25" font-family="Montserrat" font-weight="800" font-size="14">HARD ROCK</text>
+                    </svg>
+                    <!-- Royal Caribbean -->
+                    <svg class="h-8 lg:h-10 w-auto" viewBox="0 0 160 40" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20 10l5 15h-10l5-15zM10 30h20v2H10v-2z"/>
+                        <text x="40" y="25" font-family="Montserrat" font-weight="800" font-size="14">ROYAL CARIBBEAN</text>
+                    </svg>
+                    <!-- Carnival -->
+                    <svg class="h-8 lg:h-10 w-auto" viewBox="0 0 130 40" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 35c20-30 40-30 60 0H5z"/>
+                        <text x="40" y="25" font-family="Montserrat" font-weight="800" font-size="14">CARNIVAL</text>
+                    </svg>
+                    <!-- Norwegian -->
+                    <svg class="h-8 lg:h-10 w-auto" viewBox="0 0 140 40" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="20" cy="20" r="12" fill="none" stroke="currentColor" stroke-width="3"/>
+                        <path d="M20 8v24M8 20h24" stroke="currentColor" stroke-width="2"/>
+                        <text x="40" y="25" font-family="Montserrat" font-weight="800" font-size="14">NORWEGIAN</text>
+                    </svg>
+                    <!-- Princess -->
+                    <svg class="h-8 lg:h-10 w-auto" viewBox="0 0 130 40" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20 10l3 7 7 1-5 5 1 7-6-4-6 4 1-7-5-5 7-1 3-7z"/>
+                        <text x="40" y="25" font-family="Montserrat" font-weight="800" font-size="14">PRINCESS</text>
+                    </svg>
+                    <!-- Virgin -->
+                    <svg class="h-8 lg:h-10 w-auto" viewBox="0 0 120 40" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <text x="0" y="28" font-family="Montserrat" font-weight="900" font-size="28" font-style="italic">Virgin</text>
+                    </svg>
+                    <!-- Chenmed -->
+                    <svg class="h-8 lg:h-10 w-auto" viewBox="0 0 120 40" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 20h20M20 10v20" stroke="currentColor" stroke-width="4"/>
+                        <text x="40" y="25" font-family="Montserrat" font-weight="800" font-size="14">CHENMED</text>
+                    </svg>
+                    <!-- Bayview -->
+                    <svg class="h-8 lg:h-10 w-auto" viewBox="0 0 120 40" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 30s10-20 20 0"/>
+                        <text x="35" y="25" font-family="Montserrat" font-weight="800" font-size="14">BAYVIEW</text>
+                    </svg>
+                    <!-- RBI -->
+                    <svg class="h-8 lg:h-10 w-auto" viewBox="0 0 100 40" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <text x="0" y="28" font-family="Montserrat" font-weight="900" font-size="24">RBI</text>
+                    </svg>
+                    <!-- Lennar -->
+                    <svg class="h-8 lg:h-10 w-auto" viewBox="0 0 110 40" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 35V10l15-5 15 5v25H5z" fill="none" stroke="currentColor" stroke-width="2"/>
+                        <text x="45" y="25" font-family="Montserrat" font-weight="800" font-size="14">LENNAR</text>
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+        <!-- The Golden Triad Section -->
+        <section id="services" class="py-32 bg-black relative overflow-hidden">
+            <div class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_20%_30%,theme(colors.primary)_0%,transparent_50%)] opacity-40 pointer-events-none"></div>
+            <div class="container mx-auto px-6 lg:px-12 relative z-10">
+                <div class="mb-24 relative">
+                    <h2 class="text-4xl md:text-6xl font-bold tracking-tight text-white mb-6 font-display">Three Pillars. Zero Noise.</h2>
+                    <p class="text-xl text-neutral-400 max-w-2xl font-medium leading-relaxed">
+                        We architect teams around the definitive pillars of product excellence. If your talent doesn't fit the Triad, they don't fit your roadmap.
                     </p>
                 </div>
                 
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Service Card 1 -->
-                    <div class="bg-neutral-100 rounded-lg p-8 transition-all duration-300 hover:shadow-lg">
-                        <div class="text-primary text-4xl mb-4">
-                            <i class="fas fa-handshake"></i>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-10">
+                    <!-- The Visionaries (Product) -->
+                    <div class="group bg-secondary/40 backdrop-blur-md border border-white/5 p-10 rounded-3xl transition-all duration-500 hover:border-accent/50 hover:bg-secondary/60 hover:-translate-y-2 relative overflow-hidden shadow-2xl">
+                        <div class="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-20 transition-opacity">
+                            <i class="fas fa-lightbulb text-7xl text-accent"></i>
                         </div>
-                        <h3 class="text-xl font-bold mb-3">Nearshore Experts</h3>
-                        <p class="text-neutral-700 mb-4">
-                            Access top-tier talent in nearshore markets with our specialized recruitment approach. Having local community presence and access to elite LATAM talent.
+                        <div class="h-14 w-14 bg-accent/10 rounded-2xl flex items-center justify-center text-accent text-2xl mb-8 group-hover:scale-110 transition-transform duration-500">
+                            <i class="fas fa-compass"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-4 font-display">The ROI Layer</h3>
+                        <p class="text-neutral-400 mb-8 leading-relaxed font-medium">
+                            Strategic leaders who bridge roadmaps with technical execution. We don't source "planners"; we source the 1% who own the ROI of every pixel and line of code.
                         </p>
+                        <ul class="space-y-3 text-sm font-semibold text-neutral-500">
+                            <li class="flex items-center"><i class="fas fa-check text-accent/40 mr-3 text-[10px]"></i>Technical Product Managers</li>
+                            <li class="flex items-center"><i class="fas fa-check text-accent/40 mr-3 text-[10px]"></i>Growth Strategists</li>
+                            <li class="flex items-center"><i class="fas fa-check text-accent/40 mr-3 text-[10px]"></i>Data Product Leads</li>
+                        </ul>
                     </div>
 
-                    <!-- Service Card 2 -->
-                    <div class="bg-neutral-100 rounded-lg p-8 transition-all duration-300 hover:shadow-lg">
-                        <div class="text-primary text-4xl mb-4">
-                            <i class="fas fa-user-check"></i>
+                    <!-- The Artists (UX/UI) -->
+                    <div class="group bg-secondary/40 backdrop-blur-md border border-white/5 p-10 rounded-3xl transition-all duration-500 hover:border-accent/50 hover:bg-secondary/60 hover:-translate-y-2 relative overflow-hidden shadow-2xl">
+                        <div class="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-20 transition-opacity">
+                            <i class="fas fa-bezier-curve text-7xl text-accent"></i>
                         </div>
-                        <h3 class="text-xl font-bold mb-3">Concierge Selection</h3>
-                        <p class="text-neutral-700 mb-4">
-                            We find candidates who perfectly match your company's needs, culture, and long-term goals by using advanced matching algorithms and our extensive network of professionals.
+                        <div class="h-14 w-14 bg-accent/10 rounded-2xl flex items-center justify-center text-accent text-2xl mb-8 group-hover:scale-110 transition-transform duration-500">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-4 font-display">The Conversion Layer</h3>
+                        <p class="text-neutral-400 mb-8 leading-relaxed font-medium">
+                            System-thinkers who build scalable design languages. We filter for the rare talent that treats UX as a conversion engine, not just a high-end skin.
                         </p>
+                        <ul class="space-y-3 text-sm font-semibold text-neutral-500">
+                            <li class="flex items-center"><i class="fas fa-check text-accent/40 mr-3 text-[10px]"></i>Product Designers</li>
+                            <li class="flex items-center"><i class="fas fa-check text-accent/40 mr-3 text-[10px]"></i>UX Researchers</li>
+                            <li class="flex items-center"><i class="fas fa-check text-accent/40 mr-3 text-[10px]"></i>Design Ops Experts</li>
+                        </ul>
                     </div>
                     
-                    <!-- Service Card 3 -->
-                    <div class="bg-neutral-100 rounded-lg p-8 transition-all duration-300 hover:shadow-lg">
-                        <div class="text-primary text-4xl mb-4">
-                            <i class="fas fa-clipboard-check"></i>
+                    <!-- The Builders (Engineering/DevOps) -->
+                    <div class="group bg-secondary/40 backdrop-blur-md border border-white/5 p-10 rounded-3xl transition-all duration-500 hover:border-accent/50 hover:bg-secondary/60 hover:-translate-y-2 relative overflow-hidden shadow-2xl">
+                        <div class="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-20 transition-opacity">
+                            <i class="fas fa-code text-7xl text-accent"></i>
                         </div>
-                        <h3 class="text-xl font-bold mb-3">Technical Evaluations</h3>
-                        <p class="text-neutral-700 mb-4">
-                            Our comprehensive assessment process includes technical tests, behavioral interviews, and reference checks to ensure each candidate meets your exact requirements.
-                        </p>
-                    </div>
-
-                    <!-- Service Card 4 -->
-                    <div class="bg-neutral-100 rounded-lg p-8 transition-all duration-300 hover:shadow-lg">
-                        <div class="text-primary text-4xl mb-4">
-                            <i class="fas fa-laptop-code"></i>
+                        <div class="h-14 w-14 bg-accent/10 rounded-2xl flex items-center justify-center text-accent text-2xl mb-8 group-hover:scale-110 transition-transform duration-500">
+                            <i class="fas fa-terminal"></i>
                         </div>
-                        <h3 class="text-xl font-bold mb-3">Technical Talent Acquisition</h3>
-                        <p class="text-neutral-700 mb-4">
-                            Specialized recruitment for IT, engineering, and technical roles with in-depth understanding of technical requirements and skill assessments.
+                        <h3 class="text-2xl font-bold text-white mb-4 font-display">The Architecture Layer</h3>
+                        <p class="text-neutral-400 mb-8 leading-relaxed font-medium">
+                            Infrastructure elite who treat code as a high-performance craft. We source engineers who architect for scale before the first line is even written.
                         </p>
-                    </div>
-                    
-                    <!-- Service Card 5 -->
-                    <div class="bg-neutral-100 rounded-lg p-8 transition-all duration-300 hover:shadow-lg">
-                        <div class="text-primary text-4xl mb-4">
-                            <i class="fas fa-chart-line"></i>
-                        </div>
-                        <h3 class="text-xl font-bold mb-3">Global Payroll</h3>
-                        <p class="text-neutral-700 mb-4">
-                            Providing Employer of Record (EOR) capabilities, ensuring legal compliance and efficient payroll management.
-                        </p>
-                    </div>
-                    
-                    <!-- Service Card 6 -->
-                    <div class="bg-neutral-100 rounded-lg p-8 transition-all duration-300 hover:shadow-lg">
-                        <div class="text-primary text-4xl mb-4">
-                            <i class="fas fa-users-cog"></i>
-                        </div>
-                        <h3 class="text-xl font-bold mb-3">Onboarding Support</h3>
-                        <p class="text-neutral-700 mb-4">
-                            We assist with the integration of new hires into your organization, reducing ramp-up time and ensuring a smooth transition for both the candidate and your team.
-                        </p>
+                        <ul class="space-y-3 text-sm font-semibold text-neutral-500">
+                            <li class="flex items-center"><i class="fas fa-check text-accent/40 mr-3 text-[10px]"></i>Senior Full-Stack Elite</li>
+                            <li class="flex items-center"><i class="fas fa-check text-accent/40 mr-3 text-[10px]"></i>DevOps / SRE Architects</li>
+                            <li class="flex items-center"><i class="fas fa-check text-accent/40 mr-3 text-[10px]"></i>Distributed Systems Experts</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </section>
-        
-        <!-- About Section -->
-        <section id="about" class="py-20 bg-black text-white">
-            <div class="container mx-auto px-4">
-                <div class="flex flex-col md:flex-row items-center">
-                    <div class="md:w-1/2 mb-10 md:mb-0">
-                        <img src="assets/light.jpg" alt="Recruiting team in a strategy meeting" class="w-full">
-                    </div>
-                    <div class="md:w-1/2 md:pl-12">
-                        <h2 class="text-3xl md:text-4xl font-display font-bold mb-6">Who We Are</h2>
-                        <p class="text-lg text-neutral-700 mb-6 text-white">
-                            Recruiting Concierges is a specialized talent acquisition agency dedicated to helping businesses find and hire the best professionals quickly and efficiently.
-                        </p>
-                        <p class="text-lg text-neutral-700 mb-8 text-white">
-                            We deeply understand the challenges of modern recruitment and have developed a proven methodology that identifies top talent while dramatically reducing the time-to-hire and improving retention rates. Our team combines industry expertise with data-driven approaches to ensure each placement is a perfect match for your organization's needs and culture.
-                        </p>
-                        <div class="grid grid-cols-2 gap-4 mb-8">
-                            <div class="flex items-center">
-                                <div class="text-primary text-2xl mr-3">
-                                    <i class="fas fa-check-circle"></i>
-                                </div>
-                                <span class="font-medium">Industry Expertise</span>
-                            </div>
-                            <div class="flex items-center">
-                                <div class="text-primary text-2xl mr-3">
-                                    <i class="fas fa-check-circle"></i>
-                                </div>
-                                <span class="font-medium">Candidate Network</span>
-                            </div>
-                            <div class="flex items-center">
-                                <div class="text-primary text-2xl mr-3">
-                                    <i class="fas fa-check-circle"></i>
-                                </div>
-                                <span class="font-medium">Time Efficiency</span>
-                            </div>
-                            <div class="flex items-center">
-                                <div class="text-primary text-2xl mr-3">
-                                    <i class="fas fa-check-circle"></i>
-                                </div>
-                                <span class="font-medium">Quality Matches</span>
+
+        <!-- The Concierge Vetting Pipeline (About) -->
+        <section id="about" class="py-32 bg-secondary border-y border-white/5 relative overflow-hidden">
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-accent/20 rounded-full blur-[150px] pointer-events-none"></div>
+            <div class="container mx-auto px-6 lg:px-12 relative z-10">
+                <div class="text-center mb-24">
+                    <h2 class="text-xs font-black uppercase tracking-[0.3em] text-accent mb-6">The 1% Filter</h2>
+                    <h3 class="text-4xl md:text-6xl font-bold tracking-tight text-white font-display">The 1% Standard: Slicing Through the Talent Noise</h3>
+                </div>
+                
+                <div class="relative max-w-5xl mx-auto">
+                    <div class="hidden lg:block absolute top-1/2 left-0 w-full h-px bg-white/10 -translate-y-1/2"></div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        <!-- Step 1 -->
+                        <div class="relative group">
+                            <div class="bg-black/40 backdrop-blur-md border border-white/5 p-8 rounded-3xl relative z-10 transition-all duration-500 group-hover:border-accent/30 group-hover:-translate-y-2">
+                                <div class="text-4xl font-black text-white/80 mb-4 group-hover:text-white transition-colors">01</div>
+                                <h4 class="text-lg font-bold text-white mb-2 font-display">Diagnostic Sourcing</h4>
+                                <p class="text-sm text-neutral-500 leading-relaxed font-medium">
+                                    No job boards. We activate deep technical networks to surface elite talent that isn't looking—but is ready to lead.
+                                </p>
                             </div>
                         </div>
-                        <a href="#contact" class="bg-primary hover:bg-secondary text-white px-8 py-3 rounded-md font-semibold transition-colors duration-300 inline-block btn-hover">
-                            Partner With Us
-                        </a>
+
+                        <!-- Step 2 -->
+                        <div class="relative group">
+                            <div class="bg-black/40 backdrop-blur-md border border-white/5 p-8 rounded-3xl relative z-10 transition-all duration-500 group-hover:border-accent/30 group-hover:-translate-y-2">
+                                <div class="text-4xl font-black text-white/80 mb-4 group-hover:text-white transition-colors">02</div>
+                                <h4 class="text-lg font-bold text-white mb-2 font-display">Execution Audit</h4>
+                                <p class="text-sm text-neutral-500 leading-relaxed font-medium">
+                                    Code is just the entry fee. We audit system design and live execution to ensure they can solve what others can't.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Step 3 -->
+                        <div class="relative group">
+                            <div class="bg-black/40 backdrop-blur-md border border-white/5 p-8 rounded-3xl relative z-10 transition-all duration-500 group-hover:border-accent/30 group-hover:-translate-y-2">
+                                <div class="text-4xl font-black text-white/80 mb-4 group-hover:text-white transition-colors">03</div>
+                                <h4 class="text-lg font-bold text-white mb-2 font-display">Autonomy Matching</h4>
+                                <p class="text-sm text-neutral-500 leading-relaxed font-medium">
+                                    Cultural fit is a commodity. We solve for high-velocity autonomy—leaders who own outcomes, not just tasks.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Step 4 -->
+                        <div class="relative group">
+                            <div class="bg-black/40 backdrop-blur-md border border-white/5 p-8 rounded-3xl relative z-10 transition-all duration-500 group-hover:border-accent/30 group-hover:-translate-y-2">
+                                <div class="text-4xl font-black text-white/80 mb-4 group-hover:text-white transition-colors">04</div>
+                                <h4 class="text-lg font-bold text-white mb-2 font-display">Outcome Introduction</h4>
+                                <p class="text-sm text-neutral-500 leading-relaxed font-medium">
+                                    No resumes. We deliver curated performance dossiers that prove why they are the 1% for your specific roadmap.
+                                </p>
+                            </div>
+                        </div>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- The Market Audit Section -->
+        <section id="insights" class="py-32 bg-black overflow-hidden relative border-b border-white/5">
+            <div class="absolute top-0 right-0 w-96 h-96 bg-primary/10 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2"></div>
+            <div class="container mx-auto px-6 lg:px-12 relative z-10">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-24 gap-8">
+                    <div class="max-w-2xl">
+                        <h2 class="text-4xl md:text-6xl font-bold tracking-tight text-white mb-6 font-display">The Market Audit.</h2>
+                        <p class="text-xl text-neutral-400 font-medium leading-relaxed">
+                            Diagnostic intelligence for teams that value technical precision over candidate volume. High-authority deep dives into the LATAM 1%.
+                        </p>
+                    </div>
+                    <a href="blog/" class="group flex items-center space-x-3 text-accent hover:text-white transition-colors font-bold uppercase tracking-widest text-sm">
+                        <span>View All Intelligence</span>
+                        <i class="fas fa-arrow-right group-hover:translate-x-2 transition-transform"></i>
+                    </a>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Insight 1 -->
+                    <a href="blog/the-devops-renaissance-in-argentina.html" class="group cursor-pointer">
+                        <div class="overflow-hidden rounded-3xl mb-8 border border-white/5 bg-secondary aspect-[16/10] relative">
+                            <div class="absolute inset-0 bg-gradient-to-br from-primary/40 to-transparent opacity-50 group-hover:opacity-100 transition-opacity duration-500"></div>
+                            <div class="w-full h-full group-hover:scale-110 transition-transform duration-700 flex items-center justify-center">
+                                <i class="fas fa-microchip text-6xl text-white/5 group-hover:text-accent/30 transition-all"></i>
+                            </div>
+                            <div class="absolute inset-0 backdrop-blur-[2px] group-hover:backdrop-blur-none transition-all"></div>
+                            <div class="absolute inset-0 border border-white/5 group-hover:border-accent/30 transition-colors rounded-3xl"></div>
+                        </div>
+                        <div class="text-[10px] font-black uppercase tracking-[0.2em] text-accent mb-4 px-1 border-l-2 border-accent/30 ml-1">Engineering Architecture</div>
+                        <h4 class="text-2xl font-bold text-white mb-4 group-hover:text-accent transition-colors leading-tight font-display">The DevOps Renaissance in Argentina</h4>
+                        <p class="text-sm text-neutral-500 font-medium leading-relaxed mb-6 opacity-80 group-hover:opacity-100 transition-opacity">
+                            Analyzing the shift from standard software development to advanced SRE and Cloud architecture hubs in Buenos Aires.
+                        </p>
+                    </a>
+
+                    <!-- Insight 2 -->
+                    <a href="blog/zero-latency-ux-medellin-standard.html" class="group cursor-pointer">
+                        <div class="overflow-hidden rounded-3xl mb-8 border border-white/5 bg-secondary aspect-[16/10] relative">
+                            <div class="absolute inset-0 bg-gradient-to-br from-primary/40 to-transparent opacity-50 group-hover:opacity-100 transition-opacity duration-500"></div>
+                            <div class="w-full h-full group-hover:scale-110 transition-transform duration-700 flex items-center justify-center">
+                                <i class="fas fa-bezier-curve text-6xl text-white/5 group-hover:text-accent/30 transition-all"></i>
+                            </div>
+                            <div class="absolute inset-0 backdrop-blur-[2px] group-hover:backdrop-blur-none transition-all"></div>
+                            <div class="absolute inset-0 border border-white/5 group-hover:border-accent/30 transition-colors rounded-3xl"></div>
+                        </div>
+                        <div class="text-[10px] font-black uppercase tracking-[0.2em] text-accent mb-4 px-1 border-l-2 border-accent/30 ml-1">Product Systems</div>
+                        <h4 class="text-2xl font-bold text-white mb-4 group-hover:text-accent transition-colors leading-tight font-display">Zero-Latency UX: The Medellin Standard</h4>
+                        <p class="text-sm text-neutral-500 font-medium leading-relaxed mb-6 opacity-80 group-hover:opacity-100 transition-opacity">
+                            Why Colombia's design hubs are outperforming US-based agencies in complex product system design and conversion engines.
+                        </p>
+                    </a>
+
+                    <!-- Insight 3 -->
+                    <a href="blog/latam-tech-salary-guide-2025.html" class="group cursor-pointer">
+                        <div class="overflow-hidden rounded-3xl mb-8 border border-white/5 bg-secondary aspect-[16/10] relative">
+                            <div class="absolute inset-0 bg-gradient-to-br from-primary/40 to-transparent opacity-50 group-hover:opacity-100 transition-opacity duration-500"></div>
+                            <div class="w-full h-full group-hover:scale-110 transition-transform duration-700 flex items-center justify-center">
+                                <i class="fas fa-chart-line text-6xl text-white/5 group-hover:text-accent/30 transition-all"></i>
+                            </div>
+                            <div class="absolute inset-0 backdrop-blur-[2px] group-hover:backdrop-blur-none transition-all"></div>
+                            <div class="absolute inset-0 border border-white/5 group-hover:border-accent/30 transition-colors rounded-3xl"></div>
+                        </div>
+                        <div class="text-[10px] font-black uppercase tracking-[0.2em] text-accent mb-4 px-1 border-l-2 border-accent/30 ml-1">Talent Economics</div>
+                        <h4 class="text-2xl font-bold text-white mb-4 group-hover:text-accent transition-colors leading-tight font-display">LATAM Tech Salary Guide 2025</h4>
+                        <p class="text-sm text-neutral-500 font-medium leading-relaxed mb-6 opacity-80 group-hover:opacity-100 transition-opacity">
+                            Hard data on total compensation benchmarks for the top 1% of distributed technical talent across key LATAM hubs.
+                        </p>
+                    </a>
                 </div>
             </div>
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="py-20 bg-white">
-            <div class="container mx-auto px-4">
-                <div class="text-center mb-16">
-                    <h2 class="text-3xl md:text-4xl font-display font-bold mb-4">Get In Touch</h2>
-                    <p class="text-lg text-neutral-700 max-w-2xl mx-auto">
-                        Ready to elevate your talent acquisition strategy? Contact us today for a free consultation.
-                    </p>
-                </div>
-                
-                <div class="flex flex-col lg:flex-row gap-12">
-                    <div class="lg:w-1/2">
-                        <form id="contactForm" class="space-y-6">
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <div>
-                                    <label for="name" class="block text-sm font-medium text-neutral-700 mb-1">Full Name</label>
-                                    <input type="text" id="name" name="name" class="w-full px-4 py-3 border border-neutral-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" required>
-                                    <div class="hidden text-red-500 text-sm mt-1" id="nameError">Please enter your name</div>
-                                </div>
-                                <div>
-                                    <label for="email" class="block text-sm font-medium text-neutral-700 mb-1">Email Address</label>
-                                    <input type="email" id="email" name="email" class="w-full px-4 py-3 border border-neutral-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" required>
-                                    <div class="hidden text-red-500 text-sm mt-1" id="emailError">Please enter a valid email</div>
-                                </div>
-                            </div>
-                            <div>
-                                <label for="company" class="block text-sm font-medium text-neutral-700 mb-1">Company Name</label>
-                                <input type="text" id="company" name="company" class="w-full px-4 py-3 border border-neutral-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" required>
-                                <div class="hidden text-red-500 text-sm mt-1" id="companyError">Please enter your company name</div>
-                            </div>
-                            <div>
-                                <label for="position" class="block text-sm font-medium text-neutral-700 mb-1">Position to Fill</label>
-                                <input type="text" id="position" name="position" class="w-full px-4 py-3 border border-neutral-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
-                            </div>
-                            <div>
-                                <label for="message" class="block text-sm font-medium text-neutral-700 mb-1">Your Requirements</label>
-                                <textarea id="message" name="message" rows="5" class="w-full px-4 py-3 border border-neutral-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" required></textarea>
-                                <div class="hidden text-red-500 text-sm mt-1" id="messageError">Please enter your requirements</div>
-                            </div>
-                            <button type="submit" class="w-full bg-primary hover:bg-secondary text-white px-6 py-3 rounded-md font-semibold transition-colors duration-300 btn-hover">
-                                Request Consultation
-                            </button>
-                        </form>
-                        <!-- Success Message (hidden by default) -->
-                        <div id="successMessage" class="hidden mt-6 bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative">
-                            <strong class="font-bold">Success!</strong>
-                            <span class="block sm:inline"> Your request has been sent. One of our recruiting specialists will contact you within 24 hours.</span>
-                        </div>
-                    </div>
-                    
-                    <div class="lg:w-1/2">
-                        <div class="bg-neutral-100 p-8 rounded-lg h-full">
-                            <h3 class="text-2xl font-bold mb-6">Contact Information</h3>
+        <section id="contact" class="py-32 bg-secondary">
+            <div class="container mx-auto px-6 lg:px-12">
+                <div class="max-w-6xl mx-auto">
+                    <div class="bg-black border border-white/5 rounded-[40px] overflow-hidden flex flex-col lg:flex-row shadow-2xl">
+                        <div class="lg:w-1/2 p-12 lg:p-20 bg-gradient-to-br from-primary/40 to-transparent">
+                            <h2 class="text-4xl md:text-6xl font-bold tracking-tight text-white mb-8 font-display">Ready to Exit the <span class="italic text-accent">Talent Swamp</span>?</h2>
+                            <p class="text-xl text-neutral-400 mb-12 font-medium leading-relaxed">
+                                Most hiring processes are built on half-made decisions. Initiate a consultative request to access the LATAM 1% with absolute certainty.
+                            </p>
                             
-                            <div class="space-y-6">
-                                <div class="flex items-start">
-                                    <div class="text-primary text-xl mt-1 mr-4">
-                                        <i class="fas fa-map-marker-alt"></i>
-                                    </div>
-                                    <div>
-                                        <h4 class="font-semibold mb-1">Office Location</h4>
-                                        <p class="text-neutral-700">Miami, FL</p>
-                                    </div>
-                                </div>
-                                
-                                <div class="flex items-start">
-                                    <div class="text-primary text-xl mt-1 mr-4">
+                            <div class="space-y-8">
+                                <div class="flex items-center space-x-6">
+                                    <div class="h-12 w-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-accent">
                                         <i class="fas fa-envelope"></i>
                                     </div>
                                     <div>
-                                        <h4 class="font-semibold mb-1">Email Us</h4>
-                                        <p class="text-neutral-700">dsamper@recruitingconcierges.com</p>
+                                        <div class="text-xs font-bold uppercase tracking-widest text-neutral-500 mb-1">Direct Access</div>
+                                        <div class="text-white font-bold">dsamper@recruitingconcierges.com</div>
                                     </div>
                                 </div>
-                                
-                                <div class="flex items-start">
-                                    <div class="text-primary text-xl mt-1 mr-4">
-                                        <i class="fas fa-phone-alt"></i>
+                                <div class="flex items-center space-x-6">
+                                    <div class="h-12 w-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-accent">
+                                        <i class="fas fa-map-marker-alt"></i>
                                     </div>
                                     <div>
-                                        <h4 class="font-semibold mb-1">Call Us</h4>
-                                        <p class="text-neutral-700">+1 (786) 564-6712</p>
+                                        <div class="text-xs font-bold uppercase tracking-widest text-neutral-500 mb-1">Headquarters</div>
+                                        <div class="text-white font-bold">Miami, FL & LATAM Hubs</div>
                                     </div>
                                 </div>
-                                
-                                <div class="pt-6">
-                                    <h4 class="font-semibold mb-4">Follow Us</h4>
-                                    <div class="flex space-x-4">
-                                        <a href="#" class="hidden bg-neutral-200 hover:bg-primary hover:text-white text-neutral-700 w-10 h-10 rounded-full flex items-center justify-center transition-colors duration-300" aria-label="Facebook">
-                                            <i class="fab fa-facebook-f"></i>
-                                        </a>
-                                        <a href="#" class="hidden bg-neutral-200 hover:bg-primary hover:text-white text-neutral-700 w-10 h-10 rounded-full flex items-center justify-center transition-colors duration-300" aria-label="Twitter">
-                                            <i class="fab fa-twitter"></i>
-                                        </a>
-                                        <a href="#" class="hidden bg-neutral-200 hover:bg-primary hover:text-white text-neutral-700 w-10 h-10 rounded-full flex items-center justify-center transition-colors duration-300" aria-label="Instagram">
-                                            <i class="fab fa-instagram"></i>
-                                        </a>
-                                        <a
-                                            href="https://www.linkedin.com/in/dsamper009"
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            class="bg-neutral-200 hover:bg-primary hover:text-white text-neutral-700 w-10 h-10 rounded-full flex items-center justify-center transition-colors duration-300"
-                                            aria-label="LinkedIn"
-                                        >
-                                            <i class="fab fa-linkedin-in"></i>
-                                        </a>
+                            </div>
+                        </div>
+                        
+                        <div class="lg:w-1/2 p-12 lg:p-20 border-l border-white/5">
+                            <form id="contactForm" class="space-y-6">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div class="space-y-2">
+                                        <label for="name" class="text-xs font-black uppercase tracking-widest text-neutral-500">Name</label>
+                                        <input type="text" id="name" name="name" class="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-accent transition-colors font-medium" placeholder="Jane Doe" required>
+                                    </div>
+                                    <div class="space-y-2">
+                                        <label for="email" class="text-xs font-black uppercase tracking-widest text-neutral-500">Email</label>
+                                        <input type="email" id="email" name="email" class="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-accent transition-colors font-medium" placeholder="jane@company.com" required>
                                     </div>
                                 </div>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div class="space-y-2">
+                                        <label for="company" class="text-xs font-black uppercase tracking-widest text-neutral-500">Company</label>
+                                        <input type="text" id="company" name="company" class="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-accent transition-colors font-medium" placeholder="Acme Inc." required>
+                                    </div>
+                                    <div class="space-y-2">
+                                        <label for="engagement" class="text-xs font-black uppercase tracking-widest text-neutral-500">Engagement Type</label>
+                                        <select id="engagement" name="engagement" class="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-accent transition-colors font-medium appearance-none">
+                                            <option value="full-time" class="bg-black">Full-Time Placement</option>
+                                            <option value="fractional" class="bg-black">Fractional / Contract</option>
+                                            <option value="team-build" class="bg-black">Complete Team Build</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="space-y-2">
+                                    <label for="stack" class="text-xs font-black uppercase tracking-widest text-neutral-500">Primary Stack / Requirements</label>
+                                    <input type="text" id="stack" name="stack" class="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-accent transition-colors font-medium" placeholder="e.g. Next.js, Go, Kubernetes, Figma System Design" required>
+                                </div>
+                                <div class="space-y-2">
+                                    <label for="message" class="text-xs font-black uppercase tracking-widest text-neutral-500">Project Complexity & Context</label>
+                                    <textarea id="message" name="message" rows="3" class="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-accent transition-colors font-medium" placeholder="Describe the challenges you're looking to solve..." required></textarea>
+                                </div>
+                                <button type="submit" class="w-full bg-accent text-white hover:bg-primary py-5 rounded-xl font-bold transition-all duration-300 transform hover:scale-[1.02] active:scale-95 text-lg shadow-lg shadow-accent/20 border border-white/10">
+                                    Request Consultation
+                                </button>
+                            </form>
+                            <div id="successMessage" class="hidden mt-6 bg-accent/10 border border-accent/20 text-accent px-6 py-4 rounded-xl font-bold text-center">
+                                Request Received. Expect a reply within 12 hours.
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-    </main>
 
-    <!-- Footer -->
-    <footer class="bg-neutral-900 text-white pt-16 pb-8">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-                <div>
-                    <h3 class="text-xl font-bold mb-4">Recruiting<span class="text-primary">Concierges</span></h3>
-                    <p class="text-neutral-300 mb-6">
-                        Connecting exceptional talent with great companies through personalized recruitment solutions.
-                    </p>
-                    <div class="flex space-x-4">
-                        <a
-                            href="https://www.linkedin.com/in/dsamper009"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="bg-neutral-200 hover:bg-primary hover:text-white text-black w-10 h-10 rounded-full flex items-center justify-center transition-colors duration-300"
-                            aria-label="LinkedIn"
-                        >
-                            <i class="fab fa-linkedin text-2xl"></i>
-                        </a>
+        <!-- Footer -->
+        <footer class="bg-black text-white pt-24 pb-12 border-t border-white/5">
+            <div class="container mx-auto px-6 lg:px-12">
+                <div class="flex flex-col md:flex-row justify-between items-start mb-20 gap-12">
+                    <div class="max-w-xs">
+                        <div class="flex items-center space-x-3 mb-6">
+                            <svg class="h-6 w-auto" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <linearGradient id="logoGradFooter" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#4C1D95" />
+                                        <stop offset="100%" style="stop-color:#2E1065" />
+                                    </linearGradient>
+                                    <mask id="logoMaskFooter">
+                                        <rect width="100" height="100" fill="white"/>
+                                        <circle cx="50" cy="50" r="18" fill="black"/>
+                                    </mask>
+                                </defs>
+                                <g mask="url(#logoMaskFooter)">
+                                    <path d="M50 5L80 20L95 50L80 80L50 95L20 80L5 50L20 20Z" fill="url(#logoGradFooter)" fill-opacity="0.9"/>
+                                    <path d="M50 5L80 20L50 35Z" fill="#ffffff" fill-opacity="0.1"/>
+                                    <path d="M80 20L95 50L65 50Z" fill="#ffffff" fill-opacity="0.05"/>
+                                    <path d="M95 50L80 80L65 65Z" fill="#000000" fill-opacity="0.1"/>
+                                    <path d="M50 95L20 80L50 65Z" fill="#000000" fill-opacity="0.2"/>
+                                    <path d="M20 80L5 50L35 50Z" fill="#000000" fill-opacity="0.1"/>
+                                    <path d="M5 50L20 20L35 35Z" fill="#ffffff" fill-opacity="0.1"/>
+                                </g>
+                            </svg>
+                            <span class="text-lg font-bold tracking-tight text-white">Recruiting<span class="text-accent font-extrabold italic">Concierges</span></span>
+                        </div>
+                        <p class="text-neutral-500 font-medium leading-relaxed">
+                            The elite talent layer for the world's most demanding product teams. Curating the LATAM 1%.
+                        </p>
+                    </div>
+                    
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-12 lg:gap-24">
+                        <div>
+                            <h4 class="text-xs font-black uppercase tracking-widest text-neutral-500 mb-6">Expertise</h4>
+                            <ul class="space-y-4 text-sm font-bold text-neutral-600">
+                                <li><a href="#services" class="hover:text-accent transition-colors">The ROI Layer</a></li>
+                                <li><a href="#services" class="hover:text-accent transition-colors">The Conversion Layer</a></li>
+                                <li><a href="#services" class="hover:text-accent transition-colors">The Architecture Layer</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-black uppercase tracking-widest text-neutral-500 mb-6">Company</h4>
+                            <ul class="space-y-4 text-sm font-bold text-neutral-600">
+                                <li><a href="#about" class="hover:text-accent transition-colors">The Standard</a></li>
+                                <li><a href="#insights" class="hover:text-accent transition-colors">The Audit</a></li>
+                                <li><a href="https://www.linkedin.com/in/dsamper009" target="_blank" class="hover:text-accent transition-colors">LinkedIn</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-span-2 md:col-span-1">
+                            <h4 class="text-xs font-black uppercase tracking-widest text-neutral-500 mb-6">Contact</h4>
+                            <ul class="space-y-4 text-sm font-bold text-neutral-600">
+                                <li>Miami, FL</li>
+                                <li>dsamper@recruitingconcierges.com</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Services</h4>
-                    <ul class="space-y-2">
-                        <li class="text-neutral-300">Nearshore Experts</li>
-                        <li class="text-neutral-300">Concierge Selection</li>
-                        <li class="text-neutral-300">Technical Evaluations</li>
-                        <li class="text-neutral-300">Global Payroll</li>
-                        <li class="text-neutral-300">Onboarding Support</li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Company</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#about" class="text-neutral-300 hover:text-primary transition-colors duration-300">About Us</a></li>
-                        <li class="text-neutral-300">Success Stories</li>
-                        <li class="text-neutral-300">Careers</li>
-                        <li class="text-neutral-300">Blog</li>
-                        <li><a href="#contact" class="text-neutral-300 hover:text-primary transition-colors duration-300">Contact</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Contact Us</h4>
-                    <ul class="space-y-3">
-                        <li class="flex items-start">
-                            <div class="text-primary mt-1 mr-3">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </div>
-                            <span class="text-neutral-300">Miami, FL</span>
-                        </li>
-                        <li class="flex items-start">
-                            <div class="text-primary mt-1 mr-3">
-                                <i class="fas fa-envelope"></i>
-                            </div>
-                            <span class="text-neutral-300">dsamper@recruitingconcierges.com</span>
-                        </li>
-                        <li class="flex items-start">
-                            <div class="text-primary mt-1 mr-3">
-                                <i class="fas fa-phone-alt"></i>
-                            </div>
-                            <span class="text-neutral-300">+1 (786) 564-6712</span>
-                        </li>
-                    </ul>
+                <div class="flex flex-col md:flex-row justify-between items-center pt-12 border-t border-white/5 gap-6">
+                    <p class="text-neutral-600 text-xs font-bold uppercase tracking-widest">
+                        &copy; 2025 Recruiting Concierges. Elite Status Sourcing.
+                    </p>
+                    <div class="flex space-x-8">
+                        <a href="#" class="text-neutral-600 hover:text-white text-xs font-bold uppercase tracking-widest transition-colors">Privacy</a>
+                        <a href="#" class="text-neutral-600 hover:text-white text-xs font-bold uppercase tracking-widest transition-colors">Terms</a>
+                    </div>
                 </div>
             </div>
-            
-            <hr class="border-neutral-800 mb-8">
-            
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <p class="text-neutral-400 text-sm mb-4 md:mb-0">
-                    &copy; 2025 Recruiting Concierges. All rights reserved.
-                </p>
-                <div class="flex space-x-6">
-                    <a href="#" class="text-neutral-400 hover:text-primary text-sm transition-colors duration-300">Privacy Policy</a>
-                    <a href="#" class="text-neutral-400 hover:text-primary text-sm transition-colors duration-300">Terms of Service</a>
-                    <a href="#" class="text-neutral-400 hover:text-primary text-sm transition-colors duration-300">Sitemap</a>
-                </div>
-            </div>
-        </div>
-    </footer>
-</body>
+        </footer>
+    </body>
 </html>

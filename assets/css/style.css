@@ -5,7 +5,7 @@
 
 .btn-hover:hover {
     transform: translateY(-2px);
-    box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.3);
+    box-shadow: 0 10px 15px -3px rgba(76, 29, 149, 0.3); /* Using accent purple #4C1D95 */
 }
 
 .link-hover {
@@ -19,7 +19,7 @@
     height: 2px;
     bottom: -2px;
     left: 0;
-    background-color: #3B82F6;
+    background-color: #4C1D95; /* Using accent purple #4C1D95 */
     transition: width 0.3s ease;
 }
 

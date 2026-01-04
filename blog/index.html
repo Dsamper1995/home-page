@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The Market Audit: Diagnostic intelligence for high-performance product teams. Deep dives into LATAM talent economics, engineering architecture, and product systems.">
+    <title>The Market Audit | Recruiting Concierges Blog</title>
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.recruitingconcierges.com/blog">
+    <meta property="og:title" content="The Market Audit | Recruiting Concierges Blog">
+    <meta property="og:description" content="Diagnostic intelligence for high-performance product teams. Deep dives into LATAM talent economics and engineering architecture.">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="../assets/favicon.ico" sizes="any">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2E1065',
+                        secondary: '#020617',
+                        accent: '#4C1D95',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans text-neutral-300 bg-secondary selection:bg-primary selection:text-white">
+    <!-- Header -->
+    <header class="fixed w-full bg-secondary/80 backdrop-blur-md border-b border-white/5 z-50 transition-all duration-300">
+        <div class="container mx-auto px-6 lg:px-12 flex justify-between items-center h-20">
+            <div class="flex items-center">
+                <a href="../" class="flex items-center space-x-3 group">
+                    <svg class="h-8 w-auto" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#4C1D95" />
+                                <stop offset="100%" style="stop-color:#2E1065" />
+                            </linearGradient>
+                            <mask id="logoMask">
+                                <rect width="100" height="100" fill="white"/>
+                                <circle cx="50" cy="50" r="18" fill="black"/>
+                            </mask>
+                        </defs>
+                        <g mask="url(#logoMask)">
+                            <path d="M50 5L80 20L95 50L80 80L50 95L20 80L5 50L20 20Z" fill="url(#logoGrad)" fill-opacity="0.9"/>
+                        </g>
+                    </svg>
+                    <span class="text-xl font-bold tracking-tight text-white group-hover:text-accent transition-colors">
+                        Recruiting<span class="text-accent font-extrabold italic">Concierges</span>
+                    </span>
+                </a>
+            </div>
+            <nav class="hidden md:flex items-center space-x-10">
+                <a href="../#services" class="text-sm font-semibold text-neutral-400 hover:text-accent transition-colors uppercase tracking-widest">The Pillars</a>
+                <a href="../#about" class="text-sm font-semibold text-neutral-400 hover:text-accent transition-colors uppercase tracking-widest">The Standard</a>
+                <a href="../#insights" class="text-sm font-semibold text-white transition-colors uppercase tracking-widest border-b-2 border-accent">The Audit</a>
+                <a href="../#contact" class="text-sm font-semibold text-neutral-400 hover:text-accent transition-colors uppercase tracking-widest">Contact</a>
+            </nav>
+            <div class="hidden md:flex items-center">
+                <a href="../#contact" class="bg-accent text-white hover:bg-primary px-6 py-2.5 rounded-full text-sm font-bold transition-all duration-300 border border-white/10 shadow-lg shadow-accent/20">
+                    Start Sourcing
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-32 pb-24">
+        <!-- Hero -->
+        <section class="container mx-auto px-6 lg:px-12 mb-24">
+            <div class="max-w-4xl">
+                <h1 class="text-5xl md:text-7xl font-bold text-white mb-8 tracking-tighter leading-tight">
+                    The Market <span class="text-accent">Audit</span>.
+                </h1>
+                <p class="text-xl text-neutral-400 max-w-2xl leading-relaxed">
+                    Intelligence for teams that value technical precision over candidate volume. Diagnostic deep dives into the LATAM 1%.
+                </p>
+            </div>
+        </section>
+
+        <!-- Articles Grid -->
+        <section class="container mx-auto px-6 lg:px-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12" id="article-grid">
+                <!-- Engineering Architecture -->
+                <a href="the-devops-renaissance-in-argentina.html" class="group">
+                    <div class="overflow-hidden rounded-3xl mb-8 border border-white/5 bg-secondary aspect-[16/10] relative">
+                        <div class="absolute inset-0 bg-gradient-to-br from-primary/40 to-transparent opacity-50 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <div class="w-full h-full group-hover:scale-110 transition-transform duration-700 flex items-center justify-center">
+                            <i class="fas fa-microchip text-6xl text-white/5 group-hover:text-accent/30 transition-all"></i>
+                        </div>
+                        <div class="absolute inset-0 border border-white/5 group-hover:border-accent/30 transition-colors rounded-3xl"></div>
+                    </div>
+                    <div class="text-[10px] font-black uppercase tracking-[0.2em] text-accent mb-4 px-1 border-l-2 border-accent/30 ml-1">Engineering Architecture</div>
+                    <h4 class="text-2xl font-bold text-white mb-4 group-hover:text-accent transition-colors leading-tight font-display">The DevOps Renaissance in Argentina</h4>
+                    <p class="text-sm text-neutral-500 font-medium leading-relaxed opacity-80 group-hover:opacity-100 transition-opacity">Analyzing the shift from standard software development to advanced SRE and Cloud architecture hubs in Buenos Aires.</p>
+                </a>
+
+                <!-- Product Systems -->
+                <a href="zero-latency-ux-medellin-standard.html" class="group">
+                    <div class="overflow-hidden rounded-3xl mb-8 border border-white/5 bg-secondary aspect-[16/10] relative">
+                        <div class="absolute inset-0 bg-gradient-to-br from-primary/40 to-transparent opacity-50 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <div class="w-full h-full group-hover:scale-110 transition-transform duration-700 flex items-center justify-center">
+                            <i class="fas fa-bezier-curve text-6xl text-white/5 group-hover:text-accent/30 transition-all"></i>
+                        </div>
+                        <div class="absolute inset-0 border border-white/5 group-hover:border-accent/30 transition-colors rounded-3xl"></div>
+                    </div>
+                    <div class="text-[10px] font-black uppercase tracking-[0.2em] text-accent mb-4 px-1 border-l-2 border-accent/30 ml-1">Product Systems</div>
+                    <h4 class="text-2xl font-bold text-white mb-4 group-hover:text-accent transition-colors leading-tight font-display">Zero-Latency UX: The Medellin Standard</h4>
+                    <p class="text-sm text-neutral-500 font-medium leading-relaxed opacity-80 group-hover:opacity-100 transition-opacity">Why Colombia's design hubs are outperforming US-based agencies in complex product system design and conversion engines.</p>
+                </a>
+
+                <!-- Talent Economics -->
+                <a href="latam-tech-salary-guide-2025.html" class="group">
+                    <div class="overflow-hidden rounded-3xl mb-8 border border-white/5 bg-secondary aspect-[16/10] relative">
+                        <div class="absolute inset-0 bg-gradient-to-br from-primary/40 to-transparent opacity-50 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <div class="w-full h-full group-hover:scale-110 transition-transform duration-700 flex items-center justify-center">
+                            <i class="fas fa-chart-line text-6xl text-white/5 group-hover:text-accent/30 transition-all"></i>
+                        </div>
+                        <div class="absolute inset-0 border border-white/5 group-hover:border-accent/30 transition-colors rounded-3xl"></div>
+                    </div>
+                    <div class="text-[10px] font-black uppercase tracking-[0.2em] text-accent mb-4 px-1 border-l-2 border-accent/30 ml-1">Talent Economics</div>
+                    <h4 class="text-2xl font-bold text-white mb-4 group-hover:text-accent transition-colors leading-tight font-display">LATAM Tech Salary Guide 2025</h4>
+                    <p class="text-sm text-neutral-500 font-medium leading-relaxed opacity-80 group-hover:opacity-100 transition-opacity">Hard data on total compensation benchmarks for the top 1% of distributed technical talent across key LATAM hubs.</p>
+                </a>
+
+                <!-- Engineering Architecture -->
+                <a href="auditing-system-design-latam.html" class="group">
+                    <div class="overflow-hidden rounded-3xl mb-8 border border-white/5 bg-secondary aspect-[16/10] relative">
+                        <div class="absolute inset-0 bg-gradient-to-br from-primary/40 to-transparent opacity-50 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <div class="w-full h-full group-hover:scale-110 transition-transform duration-700 flex items-center justify-center">
+                            <i class="fas fa-microchip text-6xl text-white/5 group-hover:text-accent/30 transition-all"></i>
+                        </div>
+                        <div class="absolute inset-0 border border-white/5 group-hover:border-accent/30 transition-colors rounded-3xl"></div>
+                    </div>
+                    <div class="text-[10px] font-black uppercase tracking-[0.2em] text-accent mb-4 px-1 border-l-2 border-accent/30 ml-1">Engineering Architecture</div>
+                    <h4 class="text-2xl font-bold text-white mb-4 group-hover:text-accent transition-colors leading-tight font-display">Beyond the Resume: Auditing System Design</h4>
+                    <p class="text-sm text-neutral-500 font-medium leading-relaxed opacity-80 group-hover:opacity-100 transition-opacity">How to move beyond surface-level resumes and perform a deep diagnostic audit of system design skills.</p>
+                </a>
+
+                <!-- Product Systems -->
+                <a href="roi-of-technical-product-management.html" class="group">
+                    <div class="overflow-hidden rounded-3xl mb-8 border border-white/5 bg-secondary aspect-[16/10] relative">
+                        <div class="absolute inset-0 bg-gradient-to-br from-primary/40 to-transparent opacity-50 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <div class="w-full h-full group-hover:scale-110 transition-transform duration-700 flex items-center justify-center">
+                            <i class="fas fa-compass text-6xl text-white/5 group-hover:text-accent/30 transition-all"></i>
+                        </div>
+                        <div class="absolute inset-0 border border-white/5 group-hover:border-accent/30 transition-colors rounded-3xl"></div>
+                    </div>
+                    <div class="text-[10px] font-black uppercase tracking-[0.2em] text-accent mb-4 px-1 border-l-2 border-accent/30 ml-1">Product Systems</div>
+                    <h4 class="text-2xl font-bold text-white mb-4 group-hover:text-accent transition-colors leading-tight font-display">The ROI of Technical Product Management</h4>
+                    <p class="text-sm text-neutral-500 font-medium leading-relaxed opacity-80 group-hover:opacity-100 transition-opacity">Analyzing the strategic impact of TPMs in distributed teams and how they bridge the gap to execution.</p>
+                </a>
+
+                <!-- The ROI Layer -->
+                <a href="the-growth-strategist-audit.html" class="group">
+                    <div class="overflow-hidden rounded-3xl mb-8 border border-white/5 bg-secondary aspect-[16/10] relative">
+                        <div class="absolute inset-0 bg-gradient-to-br from-primary/40 to-transparent opacity-50 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <div class="w-full h-full group-hover:scale-110 transition-transform duration-700 flex items-center justify-center">
+                            <i class="fas fa-chart-line text-6xl text-white/5 group-hover:text-accent/30 transition-all"></i>
+                        </div>
+                        <div class="absolute inset-0 border border-white/5 group-hover:border-accent/30 transition-colors rounded-3xl"></div>
+                    </div>
+                    <div class="text-[10px] font-black uppercase tracking-[0.2em] text-accent mb-4 px-1 border-l-2 border-accent/30 ml-1">The ROI Layer</div>
+                    <h4 class="text-2xl font-bold text-white mb-4 group-hover:text-accent transition-colors leading-tight font-display">The Growth Strategist Audit</h4>
+                    <p class="text-sm text-neutral-500 font-medium leading-relaxed opacity-80 group-hover:opacity-100 transition-opacity">Moving beyond vanity metrics to measure real outcomes in distributed product teams.</p>
+                </a>
+
+                <!-- The Architecture Layer -->
+                <a href="senior-full-stack-architects-latam.html" class="group">
+                    <div class="overflow-hidden rounded-3xl mb-8 border border-white/5 bg-secondary aspect-[16/10] relative">
+                        <div class="absolute inset-0 bg-gradient-to-br from-primary/40 to-transparent opacity-50 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <div class="w-full h-full group-hover:scale-110 transition-transform duration-700 flex items-center justify-center">
+                            <i class="fas fa-code text-6xl text-white/5 group-hover:text-accent/30 transition-all"></i>
+                        </div>
+                        <div class="absolute inset-0 border border-white/5 group-hover:border-accent/30 transition-colors rounded-3xl"></div>
+                    </div>
+                    <div class="text-[10px] font-black uppercase tracking-[0.2em] text-accent mb-4 px-1 border-l-2 border-accent/30 ml-1">The Architecture Layer</div>
+                    <h4 class="text-2xl font-bold text-white mb-4 group-hover:text-accent transition-colors leading-tight font-display">The Architect Layer: Senior Full-Stack Elite</h4>
+                    <p class="text-sm text-neutral-500 font-medium leading-relaxed opacity-80 group-hover:opacity-100 transition-opacity">Why hiring Senior Full-Stack Architects in LATAM is the secret weapon for US startups.</p>
+                </a>
+
+                <!-- The ROI Layer -->
+                <a href="data-product-leads-latam.html" class="group">
+                    <div class="overflow-hidden rounded-3xl mb-8 border border-white/5 bg-secondary aspect-[16/10] relative">
+                        <div class="absolute inset-0 bg-gradient-to-br from-primary/40 to-transparent opacity-50 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <div class="w-full h-full group-hover:scale-110 transition-transform duration-700 flex items-center justify-center">
+                            <i class="fas fa-database text-6xl text-white/5 group-hover:text-accent/30 transition-all"></i>
+                        </div>
+                        <div class="absolute inset-0 border border-white/5 group-hover:border-accent/30 transition-colors rounded-3xl"></div>
+                    </div>
+                    <div class="text-[10px] font-black uppercase tracking-[0.2em] text-accent mb-4 px-1 border-l-2 border-accent/30 ml-1">The ROI Layer</div>
+                    <h4 class="text-2xl font-bold text-white mb-4 group-hover:text-accent transition-colors leading-tight font-display">The Data Product Lead</h4>
+                    <p class="text-sm text-neutral-500 font-medium leading-relaxed opacity-80 group-hover:opacity-100 transition-opacity">Turning raw data into strategic business assets with Data Product Leads in LATAM.</p>
+                </a>
+
+                <!-- Engineering Architecture -->
+                <a href="devops-infrastructure-audit-latam.html" class="group">
+                    <div class="overflow-hidden rounded-3xl mb-8 border border-white/5 bg-secondary aspect-[16/10] relative">
+                        <div class="absolute inset-0 bg-gradient-to-br from-primary/40 to-transparent opacity-50 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <div class="w-full h-full group-hover:scale-110 transition-transform duration-700 flex items-center justify-center">
+                            <i class="fas fa-server text-6xl text-white/5 group-hover:text-accent/30 transition-all"></i>
+                        </div>
+                        <div class="absolute inset-0 border border-white/5 group-hover:border-accent/30 transition-colors rounded-3xl"></div>
+                    </div>
+                    <div class="text-[10px] font-black uppercase tracking-[0.2em] text-accent mb-4 px-1 border-l-2 border-accent/30 ml-1">Engineering Architecture</div>
+                    <h4 class="text-2xl font-bold text-white mb-4 group-hover:text-accent transition-colors leading-tight font-display">DevOps Infrastructure Audit</h4>
+                    <p class="text-sm text-neutral-500 font-medium leading-relaxed opacity-80 group-hover:opacity-100 transition-opacity">A technical deep dive into the SRE and Infrastructure tools dominant in the LATAM 1%.</p>
+                </a>
+
+                <!-- Product Systems -->
+                <a href="design-ops-revolution-latam.html" class="group">
+                    <div class="overflow-hidden rounded-3xl mb-8 border border-white/5 bg-secondary aspect-[16/10] relative">
+                        <div class="absolute inset-0 bg-gradient-to-br from-primary/40 to-transparent opacity-50 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <div class="w-full h-full group-hover:scale-110 transition-transform duration-700 flex items-center justify-center">
+                            <i class="fas fa-palette text-6xl text-white/5 group-hover:text-accent/30 transition-all"></i>
+                        </div>
+                        <div class="absolute inset-0 border border-white/5 group-hover:border-accent/30 transition-colors rounded-3xl"></div>
+                    </div>
+                    <div class="text-[10px] font-black uppercase tracking-[0.2em] text-accent mb-4 px-1 border-l-2 border-accent/30 ml-1">Product Systems</div>
+                    <h4 class="text-2xl font-bold text-white mb-4 group-hover:text-accent transition-colors leading-tight font-display">The Design Ops Revolution</h4>
+                    <p class="text-sm text-neutral-500 font-medium leading-relaxed opacity-80 group-hover:opacity-100 transition-opacity">How Design Ops in LATAM transforms UX teams into scalable conversion engines.</p>
+                </a>
+
+                <!-- Engineering Architecture -->
+                <a href="technical-resilience-brazil-infrastructure.html" class="group">
+                    <div class="overflow-hidden rounded-3xl mb-8 border border-white/5 bg-secondary aspect-[16/10] relative">
+                        <div class="absolute inset-0 bg-gradient-to-br from-primary/40 to-transparent opacity-50 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <div class="w-full h-full group-hover:scale-110 transition-transform duration-700 flex items-center justify-center">
+                            <i class="fas fa-shield-alt text-6xl text-white/5 group-hover:text-accent/30 transition-all"></i>
+                        </div>
+                        <div class="absolute inset-0 border border-white/5 group-hover:border-accent/30 transition-colors rounded-3xl"></div>
+                    </div>
+                    <div class="text-[10px] font-black uppercase tracking-[0.2em] text-accent mb-4 px-1 border-l-2 border-accent/30 ml-1">Engineering Architecture</div>
+                    <h4 class="text-2xl font-bold text-white mb-4 group-hover:text-accent transition-colors leading-tight font-display">Technical Resilience in Brazil</h4>
+                    <p class="text-sm text-neutral-500 font-medium leading-relaxed opacity-80 group-hover:opacity-100 transition-opacity">Why Sao Paulo is the epicenter of scale-ready infrastructure and resilient engineering.</p>
+                </a>
+
+                <!-- Talent Economics -->
+                <a href="senior-latam-talent-autonomy.html" class="group">
+                    <div class="overflow-hidden rounded-3xl mb-8 border border-white/5 bg-secondary aspect-[16/10] relative">
+                        <div class="absolute inset-0 bg-gradient-to-br from-primary/40 to-transparent opacity-50 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <div class="w-full h-full group-hover:scale-110 transition-transform duration-700 flex items-center justify-center">
+                            <i class="fas fa-users text-6xl text-white/5 group-hover:text-accent/30 transition-all"></i>
+                        </div>
+                        <div class="absolute inset-0 border border-white/5 group-hover:border-accent/30 transition-colors rounded-3xl"></div>
+                    </div>
+                    <div class="text-[10px] font-black uppercase tracking-[0.2em] text-accent mb-4 px-1 border-l-2 border-accent/30 ml-1">Talent Economics</div>
+                    <h4 class="text-2xl font-bold text-white mb-4 group-hover:text-accent transition-colors leading-tight font-display">The 1% Autonomy</h4>
+                    <p class="text-sm text-neutral-500 font-medium leading-relaxed opacity-80 group-hover:opacity-100 transition-opacity">Why senior LATAM talent prefers outcome-based leadership over task management.</p>
+                </a>
+
+                <!-- Engineering Architecture -->
+                <a href="sre-blueprint-infrastructure-autonomy.html" class="group">
+                    <div class="overflow-hidden rounded-3xl mb-8 border border-white/5 bg-secondary aspect-[16/10] relative">
+                        <div class="absolute inset-0 bg-gradient-to-br from-primary/40 to-transparent opacity-50 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <div class="w-full h-full group-hover:scale-110 transition-transform duration-700 flex items-center justify-center">
+                            <i class="fas fa-map text-6xl text-white/5 group-hover:text-accent/30 transition-all"></i>
+                        </div>
+                        <div class="absolute inset-0 border border-white/5 group-hover:border-accent/30 transition-colors rounded-3xl"></div>
+                    </div>
+                    <div class="text-[10px] font-black uppercase tracking-[0.2em] text-accent mb-4 px-1 border-l-2 border-accent/30 ml-1">Engineering Architecture</div>
+                    <h4 class="text-2xl font-bold text-white mb-4 group-hover:text-accent transition-colors leading-tight font-display">The SRE Blueprint</h4>
+                    <p class="text-sm text-neutral-500 font-medium leading-relaxed opacity-80 group-hover:opacity-100 transition-opacity">Achieving infrastructure autonomy in high-growth LATAM startups.</p>
+                </a>
+
+                <!-- The ROI Layer -->
+                <a href="scaling-machine-learning-latam.html" class="group">
+                    <div class="overflow-hidden rounded-3xl mb-8 border border-white/5 bg-secondary aspect-[16/10] relative">
+                        <div class="absolute inset-0 bg-gradient-to-br from-primary/40 to-transparent opacity-50 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <div class="w-full h-full group-hover:scale-110 transition-transform duration-700 flex items-center justify-center">
+                            <i class="fas fa-brain text-6xl text-white/5 group-hover:text-accent/30 transition-all"></i>
+                        </div>
+                        <div class="absolute inset-0 border border-white/5 group-hover:border-accent/30 transition-colors rounded-3xl"></div>
+                    </div>
+                    <div class="text-[10px] font-black uppercase tracking-[0.2em] text-accent mb-4 px-1 border-l-2 border-accent/30 ml-1">The ROI Layer</div>
+                    <h4 class="text-2xl font-bold text-white mb-4 group-hover:text-accent transition-colors leading-tight font-display">Scaling Machine Learning</h4>
+                    <p class="text-sm text-neutral-500 font-medium leading-relaxed opacity-80 group-hover:opacity-100 transition-opacity">Analyzing the diagnostic approach to scaling ML and AI systems in LATAM.</p>
+                </a>
+
+                <!-- Talent Economics -->
+                <a href="strategic-talent-acquisition-mexico-city.html" class="group">
+                    <div class="overflow-hidden rounded-3xl mb-8 border border-white/5 bg-secondary aspect-[16/10] relative">
+                        <div class="absolute inset-0 bg-gradient-to-br from-primary/40 to-transparent opacity-50 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <div class="w-full h-full group-hover:scale-110 transition-transform duration-700 flex items-center justify-center">
+                            <i class="fas fa-city text-6xl text-white/5 group-hover:text-accent/30 transition-all"></i>
+                        </div>
+                        <div class="absolute inset-0 border border-white/5 group-hover:border-accent/30 transition-colors rounded-3xl"></div>
+                    </div>
+                    <div class="text-[10px] font-black uppercase tracking-[0.2em] text-accent mb-4 px-1 border-l-2 border-accent/30 ml-1">Talent Economics</div>
+                    <h4 class="text-2xl font-bold text-white mb-4 group-hover:text-accent transition-colors leading-tight font-display">Strategic Acquisition: CDMX</h4>
+                    <p class="text-sm text-neutral-500 font-medium leading-relaxed opacity-80 group-hover:opacity-100 transition-opacity">Why Mexico City is the premier strategic extension for North American product teams.</p>
+                </a>
+
+                <!-- Engineering Architecture -->
+                <a href="fintech-engineering-standard-brazil.html" class="group">
+                    <div class="overflow-hidden rounded-3xl mb-8 border border-white/5 bg-secondary aspect-[16/10] relative">
+                        <div class="absolute inset-0 bg-gradient-to-br from-primary/40 to-transparent opacity-50 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <div class="w-full h-full group-hover:scale-110 transition-transform duration-700 flex items-center justify-center">
+                            <i class="fas fa-vault text-6xl text-white/5 group-hover:text-accent/30 transition-all"></i>
+                        </div>
+                        <div class="absolute inset-0 border border-white/5 group-hover:border-accent/30 transition-colors rounded-3xl"></div>
+                    </div>
+                    <div class="text-[10px] font-black uppercase tracking-[0.2em] text-accent mb-4 px-1 border-l-2 border-accent/30 ml-1">Engineering Architecture</div>
+                    <h4 class="text-2xl font-bold text-white mb-4 group-hover:text-accent transition-colors leading-tight font-display">Fintech Engineering Standard</h4>
+                    <p class="text-sm text-neutral-500 font-medium leading-relaxed opacity-80 group-hover:opacity-100 transition-opacity">Analyzing the hyper-specialized fintech engineering landscape in Brazil.</p>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white pt-24 pb-12 border-t border-white/5">
+        <div class="container mx-auto px-6 lg:px-12">
+            <div class="flex flex-col md:flex-row justify-between items-start mb-20 gap-12">
+                <div class="max-w-xs">
+                    <div class="flex items-center space-x-3 mb-6">
+                        <span class="text-lg font-bold tracking-tight text-white">Recruiting<span class="text-accent font-extrabold italic">Concierges</span></span>
+                    </div>
+                    <p class="text-neutral-500 font-medium leading-relaxed">
+                        The elite talent layer for the world's most demanding product teams. Curating the LATAM 1%.
+                    </p>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-12 lg:gap-24">
+                    <div>
+                        <h4 class="text-xs font-black uppercase tracking-widest text-neutral-500 mb-6">Expertise</h4>
+                        <ul class="space-y-4 text-sm font-bold text-neutral-600">
+                            <li><a href="../#services" class="hover:text-accent transition-colors">The ROI Layer</a></li>
+                            <li><a href="../#services" class="hover:text-accent transition-colors">The Conversion Layer</a></li>
+                            <li><a href="../#services" class="hover:text-accent transition-colors">The Architecture Layer</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-xs font-black uppercase tracking-widest text-neutral-500 mb-6">Company</h4>
+                        <ul class="space-y-4 text-sm font-bold text-neutral-600">
+                            <li><a href="../#about" class="hover:text-accent transition-colors">The Standard</a></li>
+                            <li><a href="./" class="text-accent transition-colors">The Audit</a></li>
+                            <li><a href="https://www.linkedin.com/in/dsamper009" target="_blank" class="hover:text-accent transition-colors">LinkedIn</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
+                <p class="text-neutral-600 text-xs font-bold uppercase tracking-widest">
+                    &copy; 2025 Recruiting Concierges. Elite Status Sourcing.
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -4,25 +4,57 @@ tailwind.config = {
     theme: {
         extend: {
             colors: {
-                primary: '#3B82F6',
-                secondary: '#1E40AF',
-                neutral: {
-                    100: '#F5F5F5',
-                    200: '#E5E5E5',
-                    300: '#D4D4D4',
-                    800: '#262626',
-                    900: '#171717',
+                primary: '#2E1065', // Deepest Masculine Purple (Violet 950)
+                secondary: '#020617', // Deepest Dark Slate (Slate 950)
+                accent: '#4C1D95', // Deep Purple (Violet 900)
+                slate: {
+                    950: '#020617',
+                    900: '#0F172A',
+                    800: '#1E293B',
                 }
             },
             fontFamily: {
                 sans: ['Inter', 'sans-serif'],
                 display: ['Montserrat', 'sans-serif'],
+            },
+            letterSpacing: {
+                tighter: '-0.05em',
+                tightest: '-0.075em',
+            },
+            backgroundImage: {
+                'gradient-conic': 'conic-gradient(var(--tw-gradient-stops))',
+            },
+            animation: {
+                'marquee': 'marquee 40s linear infinite',
+                'marquee2': 'marquee2 40s linear infinite',
+            },
+            keyframes: {
+                marquee: {
+                    '0%': { transform: 'translateX(0%)' },
+                    '100%': { transform: 'translateX(-100%)' },
+                },
+                marquee2: {
+                    '0%': { transform: 'translateX(100%)' },
+                    '100%': { transform: 'translateX(0%)' },
+                },
             }
         }
     }
 }
 
 document.addEventListener('DOMContentLoaded', function() {
+    // Header scroll effect
+    const header = document.querySelector('header');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            header.classList.add('bg-secondary/95', 'py-2');
+            header.classList.remove('bg-secondary/80', 'py-0');
+        } else {
+            header.classList.remove('bg-secondary/95', 'py-2');
+            header.classList.add('bg-secondary/80', 'py-0');
+        }
+    });
+
     // Mobile menu toggle
     const menuButton = document.getElementById('menuButton');
     const mobileMenu = document.getElementById('mobileMenu');
@@ -43,64 +75,48 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Form validation
+    // Form handling
     const contactForm = document.getElementById('contactForm');
     const successMessage = document.getElementById('successMessage');
 
-    contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        console.log('Form submitted');
-        // Reset previous error messages
-        document.querySelectorAll('.text-red-500').forEach(el => el.classList.add('hidden'));
-        
-        // Get form fields
-        const name = document.getElementById('name');
-        const email = document.getElementById('email');
-        const company = document.getElementById('company');
-        const message = document.getElementById('message');
-        
-        let isValid = true;
-        
-        // Validate name
-        if (!name.value.trim()) {
-            document.getElementById('nameError').classList.remove('hidden');
-            isValid = false;
-        }
-        
-        // Validate email
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!email.value.trim() || !emailRegex.test(email.value.trim())) {
-            document.getElementById('emailError').classList.remove('hidden');
-            isValid = false;
-        }
-        
-        // Validate company
-        if (!company.value.trim()) {
-            document.getElementById('companyError').classList.remove('hidden');
-            isValid = false;
-        }
-        
-        // Validate message
-        if (!message.value.trim()) {
-            document.getElementById('messageError').classList.remove('hidden');
-            isValid = false;
-        }
-        
-        if (isValid) {
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
             // In a real implementation, you would send the form data to a server here
+            const submitBtn = contactForm.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerText;
             
-            // Hide form and show success message
-            contactForm.reset();
-            contactForm.style.display = 'none';
-            successMessage.classList.remove('hidden');
+            submitBtn.innerText = 'Transmitting...';
+            submitBtn.disabled = true;
             
-            // For demo purposes, we'll reset the form after 5 seconds
             setTimeout(() => {
-                contactForm.style.display = 'block';
-                successMessage.classList.add('hidden');
-            }, 5000);
-        }
+                contactForm.reset();
+                contactForm.classList.add('opacity-50', 'pointer-events-none');
+                successMessage.classList.remove('hidden');
+                submitBtn.innerText = originalText;
+                submitBtn.disabled = false;
+            }, 1500);
+        });
+    }
+
+    // Intersection Observer for fade-in effects
+    const observerOptions = {
+        threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('opacity-100', 'translate-y-0');
+                entry.target.classList.remove('opacity-0', 'translate-y-10');
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('section > div').forEach(el => {
+        el.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+        observer.observe(el);
     });
-            
 });
 
